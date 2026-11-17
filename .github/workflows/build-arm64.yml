@@ -29,7 +29,7 @@ permissions:
 
 concurrency:
   group: ladybird-arm64-release
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   LADYBIRD_SOURCE_DIR: ${{ github.workspace }}
