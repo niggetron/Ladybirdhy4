@@ -1,0 +1,8 @@
+name: Smoke macos-15
+on:
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: macos-15
+    steps:
+      - run: echo hello-from-macos-15
