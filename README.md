@@ -13,7 +13,7 @@ The workflow lives at `.github/workflows/build-arm64.yml`. On each run it:
 
 1. Checks out `LadybirdBrowser/ladybird` (`master`) — it always builds the
    latest upstream source, not a vendored copy.
-2. Sets up the same toolchain Ladybird's own CI uses: macOS 14, Xcode, LLVM,
+2. Sets up the same toolchain Ladybird's own CI uses: macOS (latest), Xcode, LLVM,
    NDK r29, vcpkg, Rust, Java 17 and Gradle.
 3. Patches the Android Gradle project to:
    - build **only** the `arm64-v8a` ABI, and
