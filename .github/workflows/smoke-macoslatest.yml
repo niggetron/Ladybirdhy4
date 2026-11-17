@@ -1,8 +1,0 @@
-name: Smoke macos-latest
-on:
-  workflow_dispatch:
-jobs:
-  hello:
-    runs-on: macos-latest
-    steps:
-      - run: echo hello-from-macos-latest
