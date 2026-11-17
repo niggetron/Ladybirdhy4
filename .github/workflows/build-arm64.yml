@@ -33,7 +33,7 @@ env:
   SCCACHE_DIR: ${{ github.workspace }}/.sccache
   SCCACHE_CACHE_SIZE: 2G
   SCCACHE_IDLE_TIMEOUT: 0
-  VCPKG_ROOT: ${{ github.workspace }}/Build/vcpkg
+  VCPKG_ROOT: ${{ github.workspace }}/Build/vcpkg-release
   LADYBIRD_CACHE_DIR: ${{ github.workspace }}/Build/caches
   GRADLE_OPTS: '-Xmx3072m'
   UPSTREAM_REPO: LadybirdBrowser/ladybird
