@@ -91,7 +91,7 @@ jobs:
       - name: Select Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '27'
+          xcode-version: '26.6.0'
 
       - name: Install native build dependencies
         shell: bash
