@@ -78,7 +78,7 @@ jobs:
       # ---- Toolchain (mirrors Ladybird's own CI setup action) ----
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
@@ -147,12 +147,12 @@ jobs:
           java-version: '17'
 
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v6
 
       # ---- Caches (so the weekly rebuilds stay fast) ----
 
       - name: Restore build caches
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         id: ccache
         with:
           path: ${{ env.CCACHE_DIR }}
@@ -168,7 +168,7 @@ jobs:
           ccache -z
 
       - name: Restore vcpkg binary cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         id: vcpkg
         with:
           path: ${{ github.workspace }}/Build/caches/vcpkg-binary-cache
@@ -251,14 +251,14 @@ jobs:
 
       - name: Save build caches
         if: success()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: ${{ env.CCACHE_DIR }}
           key: ${{ steps.ccache.outputs.cache-primary-key }}
 
       - name: Save vcpkg binary cache
         if: success()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: ${{ github.workspace }}/Build/caches/vcpkg-binary-cache
           key: ${{ steps.vcpkg.outputs.cache-primary-key }}
