@@ -27,10 +27,6 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: ladybird-arm64-release
-  cancel-in-progress: false
-
 env:
   LADYBIRD_SOURCE_DIR: ${{ github.workspace }}
   CCACHE_DIR: ${{ github.workspace }}/.ccache
@@ -45,7 +41,7 @@ env:
 jobs:
   build-and-release:
     name: Build and publish arm64 APK
-    runs-on: macos-14
+    runs-on: macos-latest
     timeout-minutes: 360
 
     steps:
