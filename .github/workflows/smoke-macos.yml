@@ -1,0 +1,12 @@
+name: Smoke macOS
+on:
+  workflow_dispatch:
+concurrency:
+  group: smoke-macos-test
+  cancel-in-progress: false
+jobs:
+  hello:
+    runs-on: macos-14
+    timeout-minutes: 360
+    steps:
+      - run: echo hello-from-macos
